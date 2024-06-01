@@ -1,20 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text } from 'react-native'
+import { useState } from 'react';
+import AppNavigation from './AppNavigation'
+import IntroPage from './IntroPage';
+import Dashboard from './Dashboard';
 
-export default function App() {
+const App = () => {
+  const [isLoded , setIsLoded] = useState(false);
+  setTimeout(() => {
+    setIsLoded(true);
+  }, 1000);
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <>
+    {isLoded ? <AppNavigation/> : <IntroPage/>}
+{/* <AppNavigation/>  */}
+      </>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App

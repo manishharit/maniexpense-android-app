@@ -21,10 +21,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.manishharit974.maniExpense"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f7850006-45aa-4c59-9892-34fd9fdebddb"
+      }
+    },
+    "owner": "manishharit974"
   }
 }
